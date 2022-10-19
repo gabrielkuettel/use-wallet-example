@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useConnectWallet } from "@txnlab/use-wallet";
+import Wallet from "./components/Wallet";
+import ConnectWallet from "./components/ConnectWallet";
 
 function App() {
+  const { reconnectProviders } = useConnectWallet();
+
+  // Reconnect the session when the user returns to the dApp
+  React.useEffect(() => {
+    reconnectProviders();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: "20px" }}>
+      <ConnectWallet />
+      <hr />
+      <Wallet />
     </div>
   );
 }
