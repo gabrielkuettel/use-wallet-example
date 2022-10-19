@@ -2,7 +2,14 @@ import React from "react";
 import { useConnectWallet } from "@txnlab/use-wallet";
 
 export default function ConnectWallet() {
-  const { providers } = useConnectWallet();
+  const { providers, accounts, activeAccount } = useConnectWallet();
+
+  // Use these properties to display connected accounts to users.
+  // They are also return by the `useWallet` hook.
+  React.useEffect(() => {
+    console.log("connected accounts", accounts);
+    console.log("active account", activeAccount);
+  });
 
   // Map through the providers, and render "connect", "set active", and "disconnect" buttons
   return (

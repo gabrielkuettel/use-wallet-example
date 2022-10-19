@@ -10,14 +10,7 @@ import algosdk from "algosdk";
 const algodClient = new algosdk.Algodv2(NODE_TOKEN, NODE_SERVER, NODE_PORT);
 
 export default function Wallet() {
-  const { activeAccount, accounts, signTransactions, sendTransactions } =
-    useWallet();
-
-  // Use these properties to display connected accounts to users.
-  React.useEffect(() => {
-    console.log("connected accounts", accounts);
-    console.log("active account", activeAccount);
-  });
+  const { activeAccount, signTransactions, sendTransactions } = useWallet();
 
   const sendTransaction = async (
     from?: string,
