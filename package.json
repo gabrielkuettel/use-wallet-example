@@ -1,6 +1,6 @@
 {
   "name": "use-wallet-example",
-  "homepage": "http://gabrielkuettel.github.io/use-wallet-example",
+  "homepage": "https://gabrielkuettel.github.io/use-wallet-example",  
   "version": "0.1.0",
   "dependencies": {
     "@blockshake/defly-connect": "^0.3.6",
