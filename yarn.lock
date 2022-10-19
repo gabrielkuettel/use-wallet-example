@@ -1860,10 +1860,10 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
-"@txnlab/use-wallet@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@txnlab/use-wallet/-/use-wallet-0.0.3.tgz#5a823f0cec44fb81177e1d3086f1575ae01eed97"
-  integrity sha512-l/wa5R+aegRzQKyJZ19N6MnCA7zdHXCPd29zJ7mnSVT/bGBEgA26ffnbQ7PlsRnPRhEU+3S38G7tRDQs2Um94w==
+"@txnlab/use-wallet@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@txnlab/use-wallet/-/use-wallet-0.0.4.tgz#c9edcaf388550d20395008c6fd33768789890af3"
+  integrity sha512-q1QyFrhkS9YSnrucXSjJ33EknmocqRKowik/TTDMD/v+F5zKycDkb11MAu4JedB1aVR14nJq3wc80Uq5iO9X2w==
   dependencies:
     big.js "^6.2.1"
     immer "^9.0.15"
