@@ -11,7 +11,9 @@ export default function ConnectWallet() {
     console.log("active account", activeAccount);
   });
 
-  // Map through the providers, and render "connect", "set active", and "disconnect" buttons
+  // Map through the providers.
+  // Render account information and "connect", "set active", and "disconnect" buttons.
+  // Finally, map through the `accounts` property to render a dropdown for each connected account.
   return (
     <div>
       {providers.map((provider) => (
@@ -41,6 +43,18 @@ export default function ConnectWallet() {
             >
               Set Active
             </button>
+            <div>
+              {provider.isActive && provider.accounts.length && (
+                <select
+                  value={provider.activeAccount?.address}
+                  onChange={(e) => provider.selectAccount(e.target.value)}
+                >
+                  {provider.accounts.map((account) => (
+                    <option value={account.address}>{account.address}</option>
+                  ))}
+                </select>
+              )}
+            </div>
           </div>
         </div>
       ))}
