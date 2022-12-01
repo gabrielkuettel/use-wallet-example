@@ -1,22 +1,25 @@
 import React from "react";
-import { useConnectWallet } from "@txnlab/use-wallet";
-import Wallet from "./components/Wallet";
-import ConnectWallet from "./components/ConnectWallet";
+import {
+  reconnectProviders,
+  initializeProviders,
+  WalletProvider,
+} from "@txnlab/use-wallet";
+import Connect from "./components/Connect";
+
+const walletProviders = initializeProviders();
 
 function App() {
-  const { reconnectProviders } = useConnectWallet();
-
   // Reconnect the session when the user returns to the dApp
   React.useEffect(() => {
-    reconnectProviders();
+    reconnectProviders(walletProviders);
   }, []);
 
   return (
-    <div style={{ padding: "20px" }}>
-      <ConnectWallet />
-      <hr />
-      <Wallet />
-    </div>
+    <WalletProvider value={walletProviders}>
+      <div style={{ padding: "20px" }}>
+        <Connect />
+      </div>
+    </WalletProvider>
   );
 }
 

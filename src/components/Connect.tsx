@@ -1,11 +1,10 @@
 import React from "react";
-import { useConnectWallet } from "@txnlab/use-wallet";
+import { useWallet } from "@txnlab/use-wallet";
 
 export default function ConnectWallet() {
-  const { providers, accounts, activeAccount } = useConnectWallet();
+  const { providers, accounts, activeAccount } = useWallet();
 
   // Use these properties to display connected accounts to users.
-  // They are also return by the `useWallet` hook.
   React.useEffect(() => {
     console.log("connected accounts", accounts);
     console.log("active account", activeAccount);
@@ -16,16 +15,11 @@ export default function ConnectWallet() {
   // Finally, map through the `accounts` property to render a dropdown for each connected account.
   return (
     <div>
-      {providers.map((provider) => (
-        <div key={"provider-" + provider.id}>
+      {providers?.map((provider) => (
+        <div key={"provider-" + provider.metadata.id}>
           <h4>
-            <img
-              width={30}
-              height={30}
-              src={provider.icon}
-              alt={provider.name}
-            />
-            {provider.name} {provider.isActive && "[active]"}
+            <img width={30} height={30} src={provider.metadata.icon} />
+            {provider.metadata.id} {provider.isActive && "[active]"}
           </h4>
           <div>
             <button onClick={provider.connect} disabled={provider.isConnected}>
