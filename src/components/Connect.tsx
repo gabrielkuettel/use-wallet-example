@@ -18,7 +18,7 @@ export default function ConnectWallet() {
       {providers?.map((provider) => (
         <div key={"provider-" + provider.metadata.id}>
           <h4>
-            <img width={30} height={30} src={provider.metadata.icon} />
+            <img width={30} height={30} alt="" src={provider.metadata.icon} />
             {provider.metadata.id} {provider.isActive && "[active]"}
           </h4>
           <div>
