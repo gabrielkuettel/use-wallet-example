@@ -2,13 +2,7 @@ import React from "react";
 import { useWallet } from "@txnlab/use-wallet";
 
 export default function ConnectWallet() {
-  const { providers, accounts, activeAccount } = useWallet();
-
-  // Use these properties to display connected accounts to users.
-  React.useEffect(() => {
-    console.log("connected accounts", accounts);
-    console.log("active account", activeAccount);
-  });
+  const { providers, activeAccount } = useWallet();
 
   // Map through the providers.
   // Render account information and "connect", "set active", and "disconnect" buttons.
@@ -32,7 +26,7 @@ export default function ConnectWallet() {
               Disonnect
             </button>
             <button
-              onClick={provider.setActive}
+              onClick={provider.setActiveProvider}
               disabled={!provider.isConnected || provider.isActive}
             >
               Set Active
@@ -40,8 +34,8 @@ export default function ConnectWallet() {
             <div>
               {provider.isActive && provider.accounts.length && (
                 <select
-                  value={provider.activeAccount?.address}
-                  onChange={(e) => provider.selectAccount(e.target.value)}
+                  value={activeAccount?.address}
+                  onChange={(e) => provider.setActiveAccount(e.target.value)}
                 >
                   {provider.accounts.map((account) => (
                     <option value={account.address}>{account.address}</option>
