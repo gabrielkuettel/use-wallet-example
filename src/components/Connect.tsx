@@ -1,7 +1,7 @@
 import React from "react";
 import { useWallet } from "@txnlab/use-wallet";
 
-export default function ConnectWallet() {
+export default function Connect() {
   const { providers, activeAccount } = useWallet();
 
   // Map through the providers.
@@ -13,7 +13,7 @@ export default function ConnectWallet() {
         <div key={"provider-" + provider.metadata.id}>
           <h4>
             <img width={30} height={30} alt="" src={provider.metadata.icon} />
-            {provider.metadata.id} {provider.isActive && "[active]"}
+            {provider.metadata.name} {provider.isActive && "[active]"}
           </h4>
           <div>
             <button onClick={provider.connect} disabled={provider.isConnected}>
