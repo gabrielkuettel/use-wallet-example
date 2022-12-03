@@ -24,25 +24,34 @@ export default function Transact() {
     if (!from || !to || !amount) {
       throw new Error("Missing transaction params.");
     }
+
     const params = await algodClient.getTransactionParams().do();
+
     const transaction = algosdk.makePaymentTxnWithSuggestedParamsFromObject({
       from,
       to,
       amount,
       suggestedParams: params,
     });
+
     const encodedTransaction = algosdk.encodeUnsignedTransaction(transaction);
+
     const signedTransactions = await signTransactions([encodedTransaction]);
+
     const waitRoundsToConfirm = 4;
+
     const { id } = await sendTransactions(
       signedTransactions,
       waitRoundsToConfirm
     );
+
     console.log("Successfully sent transaction. Transaction ID: ", id);
   };
+
   if (!activeAccount) {
     return <p>Connect an account first.</p>;
   }
+
   return (
     <div>
       <button
