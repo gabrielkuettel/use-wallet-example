@@ -1,1 +1,0 @@
-(self.webpackChunkuse_wallet_example=self.webpackChunkuse_wallet_example||[]).push([[563,254,467],{6563:function(){}}]);
