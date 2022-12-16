@@ -1082,17 +1082,18 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@blockshake/defly-connect@^0.3.6":
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/@blockshake/defly-connect/-/defly-connect-0.3.6.tgz#c5d25cb60a28cd8ccc16fdb328d222926a13d6e3"
-  integrity sha512-W3gD+GMw+y3zNPnkzU/LcWa6sMBE4tp8pM9hbTNP2vLtyjJUhMr+w6jus+dPxlJ9ZYykZH4M7VKkVxnQ3PWfIA==
+"@blockshake/defly-connect@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@blockshake/defly-connect/-/defly-connect-1.0.0.tgz#44f0b4954efdff421ba4ddf49a47958d9591159d"
+  integrity sha512-tXFb5Qtfn3keh4lfk/o/6eG6HG8mwQSfKb1HRyMTPsXcJM7chX+6zAaw6zVtxviathupN0MSZK5MmxB1WU2PkA==
   dependencies:
     "@json-rpc-tools/utils" "^1.7.6"
-    "@walletconnect/client" "^1.7.7"
+    "@walletconnect/client" "^1.8.0"
+    "@walletconnect/types" "^1.8.0"
     bowser "^2.11.0"
     buffer "^6.0.3"
-    lottie-react "^2.3.1"
-    react-qrcode-logo "^2.7.0"
+    lottie-web "^5.9.6"
+    qr-code-styling "^1.6.0-rc.1"
 
 "@csstools/normalize.css@*":
   version "12.0.0"
@@ -1860,10 +1861,10 @@
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
   integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
-"@txnlab/use-wallet@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@txnlab/use-wallet/-/use-wallet-1.0.0.tgz#ad618f4343b78eab96e70292d4b996b7fab5bf8f"
-  integrity sha512-F73Eies30v3M3cBOCJIhnqtwXYP79vUFef36M6AidUrzX3F8f+05XGuwSgEKrKBaBwQ7BLxouRSQ3D6ebKSkzg==
+"@txnlab/use-wallet@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@txnlab/use-wallet/-/use-wallet-1.0.4.tgz#e5590294d04261b67cc29b5f37f88605c2c456a7"
+  integrity sha512-z07kOccuUzK+JvraoBN/C6IitrgAOq8JD3R9b6KJaQfoBBC1TjZHj2b6Nd52vXLj1S56Re8OC1qM0/WlBQlL1Q==
   dependencies:
     immer "^9.0.15"
     zustand "^4.1.4"
@@ -6751,6 +6752,11 @@ lottie-web@^5.9.4:
   resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.9.6.tgz#62ae68563355d3e04aa75d53dec3dd4bea0e57c9"
   integrity sha512-JFs7KsHwflugH5qIXBpB4905yC1Sub2MZWtl/elvO/QC6qj1ApqbUZJyjzJseJUtVpgiDaXQLjBlIJGS7UUUXA==
 
+lottie-web@^5.9.6:
+  version "5.10.0"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.10.0.tgz#72563f22efdcf2b8f7e8359743514930ebaf5f8c"
+  integrity sha512-q2hfqKrGXNkwjSSZjKxf3fWMi0e3ZBc03qBkVWoGbwUJ7BcG+9YXjMPtmmhitzk8Nc6VQ5PRnh9yInPdfq0PZg==
+
 lower-case@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/lower-case/-/lower-case-2.0.2.tgz#6fa237c63dbdc4a82ca0fd882e4722dc5e634e28"
@@ -8090,7 +8096,14 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha512-kV/CThkXo6xyFEZUugw/+pIOywXcDbFYgSct5cT3gqlbkBE1SJdwy6UQoZvodiWF/ckQLZyDE/Bu1M6gVu5lVw==
 
-qrcode-generator@^1.4.1:
+qr-code-styling@^1.6.0-rc.1:
+  version "1.6.0-rc.1"
+  resolved "https://registry.yarnpkg.com/qr-code-styling/-/qr-code-styling-1.6.0-rc.1.tgz#6c89e185fa50cc9135101085c12ae95b06f1b290"
+  integrity sha512-ModRIiW6oUnsP18QzrRYZSc/CFKFKIdj7pUs57AEVH20ajlglRpN3HukjHk0UbNMTlKGuaYl7Gt6/O5Gg2NU2Q==
+  dependencies:
+    qrcode-generator "^1.4.3"
+
+qrcode-generator@^1.4.1, qrcode-generator@^1.4.3:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/qrcode-generator/-/qrcode-generator-1.4.4.tgz#63f771224854759329a99048806a53ed278740e7"
   integrity sha512-HM7yY8O2ilqhmULxGMpcHSF1EhJJ9yBj8gvDEuZ6M+KGJ0YY2hKpnXvRD+hZPLrDVck3ExIGhmPtSdcjC+guuw==
